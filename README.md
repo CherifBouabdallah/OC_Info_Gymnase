@@ -14,6 +14,6 @@ Si vous avez des suggestions d'amélioration, des bogues à signaler ou si vous 
 
 ## Contact
 
-Pour toute question ou demande de collaboration, vous pouvez me contacter à l'adresse suivante : [chrif.bouabdllah@gmail.com](mailto:chrif.bouabdllah@gmail.com).
+Pour toute question ou demande de collaboration, vous pouvez me contacter à l'adresse suivante : [chrif.bouabdallah@gmail.com](mailto:chrif.bouabdallah@gmail.com).
 
 Merci de votre intérêt pour mes projets !
