@@ -44,7 +44,14 @@ print(number_bb // number)
 '''
 
 
-L=["a", "b", "c", "d", "e", "f", "g"] 
+word = str(input("give me a word "))
 
-for i in range(6, 0, 1):
-    print(L[i])
+L=["a", "e", "i", "o", "u", "y"] 
+n = 0
+n_v = 0
+
+for n in word:
+    if n in L:
+        n_v += 1
+    else:
+        
