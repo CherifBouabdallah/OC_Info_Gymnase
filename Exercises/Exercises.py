@@ -41,7 +41,7 @@ print(str(number)[3])
 print(number_bb // number)
 print(number_bb // number)
 
-'''
+
 
 
 word = str(input("give me a word "))
@@ -55,3 +55,30 @@ for n in word:
         n_v += 1
 
 print(n_v)
+
+
+
+
+word = str(input("give me a word : "))
+drow = 0
+
+for i in range(len(word), 0, -1):
+    drow = word[i-1]
+    print(drow ,end="")
+print()
+
+'''
+
+
+
+
+days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+
+
+days.append("Monday")
+days.insert(0, "Sunday")
+del days[1]
+del days[6]
+
+for i in range(len(days)):
+    print(days[i])
