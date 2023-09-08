@@ -53,5 +53,5 @@ n_v = 0
 for n in word:
     if n in L:
         n_v += 1
-    else:
-        
+
+print(n_v)
