@@ -151,7 +151,43 @@ while b <= len(lst) or a >= 0:
     b += 1
 
 
-    
+
+
+
+lst = [3,4,3,3,5,6,7,1,2,6,7,8,3,2,1]
+
+n = int(input('what is a number for ya : '))
+
+if len(lst) < n:
+    print('no')
+    exit()
+
+while len(lst) % n != 0:
+    lst.append(0)
+
+
+for div in n:
+    print()
+
+
+
+
+lst = ["Pierre", "Paul", "Jacques"]
+
+for i in lst:
+    if i[-1] == "e":
+        print(i)
+        
+        
 '''
 
-lst = [3,4,3,3,5,6,7,1,2,6,7,8,3,2,1]    
+liste1 =[1 ,2 ,3 ,4 ,5 ,6] 
+liste2=liste1
+liste2.append(7)
+print(liste1)
+
+
+liste1 =[1 ,2 ,3 ,4 ,5 ,6] 
+liste2=liste1.copy() 
+liste2.append(7) 
+print(liste1)
