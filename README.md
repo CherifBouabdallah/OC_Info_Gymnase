@@ -1,6 +1,6 @@
-# Projets de l'Option Complémentaire de 3ème Année au Gymnase en Suisse
+# Projets de l'Option Complémentaire de 3ème Année au Gymnase d'Yverdon
 
-Bienvenue dans ce référentiel qui rassemble les programmes que j'ai créés dans le cadre de mon option complémentaire de 3ème année au gymnase en Suisse. Ces projets représentent mon travail et mes compétences dans divers domaines de l'informatique et de la programmation.
+Bienvenue dans ce référentiel qui rassemble les programmes que j'ai créés dans le cadre de mon option complémentaire de 3ème année au gymnase d'Yverdon. Ces projets représentent mon travail et mes compétences dans divers domaines de l'informatique et de la programmation.
 
 ## Aperçu des Projets
 
