@@ -67,7 +67,7 @@ for i in range(len(word), 0, -1):
     print(drow ,end="")
 print()
 
-'''
+
 
 
 
@@ -82,3 +82,76 @@ del days[6]
 
 for i in range(len(days)):
     print(days[i])
+
+
+
+
+alphabet= ["a", "b", "c", "d", "e", "f", "g", "h", "i ", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s ", "t", "u", "v", "w", "x", "y", "z"]
+
+del alphabet[13]
+del alphabet[10]
+
+alphabet.remove("d")
+alphabet.remove("b")
+alphabet.remove("t")
+alphabet.remove("z")
+
+
+print(alphabet)
+
+
+
+
+
+liste = [3,4,3,3,5,6,7,1,2,6,7,8,3,2,1]
+lst = []
+
+for i in liste:
+    if i not in lst:
+        lst.append(i)
+
+print(lst)
+
+liste = lst
+print(liste)
+
+
+
+
+notes = [ 5, 3, 6, 2.5, 4.5, 5, 3]
+
+moyenne = 0
+somme = 0
+
+notes.sort()
+del notes[0]
+
+for i in notes:
+    somme += i
+    moyenne = somme/len(notes)
+
+print(moyenne)
+
+
+
+
+
+
+for n in range(-1, len(lst), 2):
+    print(lst[n-1:n+1])
+
+
+
+a=7
+b=9
+
+while b <= len(lst) or a >= 0:
+    print(lst[a:b])
+    a -= 1
+    b += 1
+
+
+    
+'''
+
+lst = [3,4,3,3,5,6,7,1,2,6,7,8,3,2,1]    
