@@ -23,8 +23,8 @@ t.penup()
 t.goto(300, -150)
 t.pendown()
 t.circle(50)
-p1.goto(-300,100)
-p2.goto(-300,-100)
+p1.goto(-450,100)
+p2.goto(-450,-100)
 
 
 #while p1.position() <= (200, 200) or p2.position() <= (200, 200):
@@ -65,7 +65,7 @@ def walk1():
     if p1.position() <= (200, 200):
         x0=p1.position()[0]
         x1=p1.position()[1]
-        x0 +=10
+        x0 +=10 + random.randint(1, 5)
         p1.goto(x0,x1)
     else:
         print('P1 is winner')
@@ -74,7 +74,7 @@ def walk2():
     if p2.position() <= (200, 200):
         x0=p2.position()[0]
         x1=p2.position()[1]
-        x0 +=10
+        x0 +=10 + random.randint(1, 5)
         p2.goto(x0,x1)
     else:
         print('P2 is winner')
