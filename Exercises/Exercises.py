@@ -179,7 +179,7 @@ for i in lst:
         print(i)
         
         
-'''
+
 
 liste1 =[1 ,2 ,3 ,4 ,5 ,6] 
 liste2=liste1
@@ -191,3 +191,77 @@ liste1 =[1 ,2 ,3 ,4 ,5 ,6]
 liste2=liste1.copy() 
 liste2.append(7) 
 print(liste1)
+
+
+
+n = 0
+lst=[3,4,3,2,5,6,3,5,4,6,7,2,4,1,2,1,2,1,1,1]
+lst.sort()
+
+for i in lst:
+    if n != i:
+        print(lst.count(i))
+        n = i
+    
+
+
+list = [17, 38, 10, 25, 72]
+
+list.sort()
+list.append(12)
+list.reverse()
+print(list)
+
+
+
+print("Hello","me", sep="+") 
+print("Hello","me", sep="\n") 
+print("Chemin du fichier:","Home", "usr","Bureau", sep="/")
+
+print("Hello","me", end="!")
+
+
+
+print(f'{123.45679:.2f}')
+print(f'{123.45679:.4e}')
+
+
+
+
+print(f'{10: 6d}') 
+print(f'{100: 6d}') 
+print(f'{10: 10d}') 
+print(f'{10: >6d}') 
+print(f'{10: <6d}') 
+print(f'{10: ^6d}')
+
+
+
+def func(mot, n=3): 
+    return mot[:n]
+
+print(func('chingchangchinchangchangjeumintheheimindachaywooBINGCHILLING'))
+
+
+a=10
+def variable(n):
+    a=3
+    b= a+ 4
+    print(f"Dans la fonction a={a} et b={b}")
+    print("a=",a) 
+    print("b=",b)
+
+variable(5)
+
+
+'''
+
+def func(end, start = 0,  step = 2):
+    added = 0
+    for i in range(start, end+1, step):
+        added += i
+
+    return added
+
+def prem(start, end):
+    n = 0
