@@ -240,7 +240,7 @@ print(f'{10: ^6d}')
 def func(mot, n=3): 
     return mot[:n]
 
-print(func('chingchangchinchangchangjeumintheheimindachaywooBINGCHILLING'))
+print(func('no'))
 
 
 a=10
@@ -254,7 +254,7 @@ def variable(n):
 variable(5)
 
 
-'''
+
 
 def func(end, start = 0,  step = 2):
     added = 0
@@ -263,5 +263,72 @@ def func(end, start = 0,  step = 2):
 
     return added
 
-def prem(start, end):
-    n = 0
+lst = []
+def prem(end, start = 2):
+    for i in range(start, end+1):
+        j = 2
+        while i % j != 0 and j<i:
+            j = j + 1
+        if j == i:
+            lst.append(i)
+    return lst
+
+
+print(prem(300))
+
+
+
+
+lst = [4 ,567, 5, 8, 4]
+
+def multi(list):
+    for i in range(len(list)):
+        list[i] *= 2
+    print (list)
+
+def invert(list):
+    temp_lst = []
+
+    for i in range((len(list)-1)):
+        temp_lst.append(list[-(i+1)])
+        
+    temp_lst.append(list[0])
+    print(list)
+    print(temp_lst)
+
+invert(lst)
+
+
+
+
+notes = {'maths' : 6, 'fr' : 4 , 'histoire' : 5}
+
+notes['Bio'] = 3
+
+print(notes['fr'])
+n = 0
+for i in notes:
+    n += notes[i]
+
+moy = n/len(notes)
+
+print(moy)
+print(n)
+
+
+'''
+
+
+telephones = { "Julien":"0712345678", "Julie":" 0787654321", "Juliette":"070707070707" }
+
+prenoms = list(telephones.keys()) 
+numeros = list(telephones.values()) 
+print(prenoms)
+print(numeros)
+
+print("Juliette" in telephones) 
+print("Marie" in telephones)
+
+del telephones["Julien"]
+
+print(telephones)
