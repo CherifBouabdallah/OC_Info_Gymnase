@@ -2,6 +2,10 @@ mot = 'Hello'
 
 fichier = open('/Users/pi73xdo/Desktop/Cherif_Info/TP/Hooverphonic.txt', "r")
 text_file = fichier.read()
+print(text_file)
+
+fichier2 = open('/Users/pi73xdo/Desktop/Cherif_Info/TP/Madaboutyou.txt', "w+")
+print(text_file, file=fichier2)
 
 def Crypt(mot):
     space = ""
