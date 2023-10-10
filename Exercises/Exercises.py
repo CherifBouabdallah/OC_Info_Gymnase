@@ -316,7 +316,7 @@ print(moy)
 print(n)
 
 
-'''
+
 
 
 telephones = { "Julien":"0712345678", "Julie":" 0787654321", "Juliette":"070707070707" }
@@ -332,3 +332,44 @@ print("Marie" in telephones)
 del telephones["Julien"]
 
 print(telephones)
+
+
+
+notes = {'maths' : 6, 'fr' : 4 , 'histoire' : 5, 'Bio' : 4}
+
+
+for key in notes: 
+    notes[key] += 1
+
+    print(key, notes[key])
+
+
+for key,val in notes.items():
+    print(key, val-1)
+
+
+    
+
+'''
+
+
+word = str(input('GIBE ME A WORD MAN BEAUTUFUL : '))
+
+
+def function(word):
+    dic = {}
+
+
+    for i in word:
+        if i in dic:
+            dic[i] += 1
+        else:
+            dic[i] = 1
+
+    for i in dic:
+        print('il y a', dic[i], i, 'dans le mot')
+
+
+
+function(word)
+
