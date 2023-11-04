@@ -1,7 +1,13 @@
-import math # me permet d’utiliser math.sqrt(x) qui me donne la racine carrée de x
-n = int(input ( " donner un entier plus grand que 10 ")) 
-while n <10:
-    n = int(input(" donner un entier plus grand que 10 ")) 
-for i in range (0 , n ):
-    if int (math.sqrt(i)) == math.sqrt(i): 
-        print ( i )
+mot = "Abrasracourcix"
+fin = 1
+debut =0
+pas = 1
+print(mot[debut:fin])
+while fin < len (mot) :
+    début = fin
+    pas +=1
+    fin += k
+    if fin < len (mot) :
+        print ( mot [ debut : fin ])
+    else :
+        print (mot[début:len(mot)])
