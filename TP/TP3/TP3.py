@@ -58,6 +58,7 @@ def f(L, score = score):
         score[0] += 1
     else:
         score[0] += 1
+        
     print (score[0])
     random_letter = random.choice(alphab)
 
@@ -66,7 +67,6 @@ def f(L, score = score):
 
     letters[i] = random_letter
     pos[i] = [random.randint(-450,450),500]
-
 
 def afficher_score(): 
     turtle.clear()
@@ -105,5 +105,6 @@ screen.onkey(lambda: f("z"), "z")
 while True:
     afficher_lettre()
     afficher_score()
+    score +=1 
     screen.listen()
     screen.mainloop()
