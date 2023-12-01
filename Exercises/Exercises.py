@@ -350,7 +350,7 @@ for key,val in notes.items():
 
     
 
-'''
+
 
 
 word = str(input('GIBE ME A WORD MAN BEAUTUFUL : '))
@@ -373,3 +373,27 @@ def function(word):
 
 function(word)
 
+'''
+
+grille =[]
+ligne =[]
+
+for i in range(5):
+    ligne.append(0) 
+
+for i in range(5):
+    grille.append(ligne.copy())
+
+grille[2][3]=5
+print(grille[2][3]) 
+print(grille[4][3])
+
+
+print("chaques lignes")
+for i in range(len(grille)): 
+    print(grille[i])
+
+
+for x in range(len(grille)):
+    for y in range(len(grille[x])):
+        print(grille[x][y]) 
