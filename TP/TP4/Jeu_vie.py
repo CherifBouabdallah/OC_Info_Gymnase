@@ -1,72 +1,68 @@
 # JEU DE LA VIE
-from tkinter import Tk, Canvas 
-import random 
+from tkinter import Tk, Canvas
+import random
 TAILLE = 600
 
-grille = []
-ligne = []
-
-
+# Création de la grille
+Grille = [ ] 
 for i in range(60):
-    ligne.append(0)
-for i in range(60):
-    grille.append(ligne.copy())
+    Grille.append([0]*60)
 
-for i in range(50000
-               ):
-    grille[random.randint(0, 59)][random.randint(0, 59)] = 1
- 
-#for i in range(len(grille)): 
-#    print(grille[i])
+# Remplissage Aléatoire de la grille
+for i in range(500):
+    x = random.randint(0,59)
+    y = random.randint(0,59)
+    Grille[x][y] = 1
 
-def Affiche(grille):
-        canvas.delete("all")
-        for x in range(len(grille)):
-            for y in range(len(grille[x])):
-                if grille[x][y] == 1:
-                    canvas.create_rectangle(x*10,y*10,x*10+10,y*10+10,fill="red")
+# Affichage des carrés dans la grille
+def Affiche():
+    canvas.delete("all")
+    for x in range(60) :
+       for y in range(60) :
+           if Grille[x][y] == 1:
+             xx = x * 10
+             yy = y * 10
+             c="red"
+             canvas.create_rectangle(xx,yy,xx+10,yy+10,fill=c)
+             
+# Compte le nombre de voisins dans la grille
+def CompteVoisins(x,y) :
+    count = 0
+    V = [(x-1,y-1), (x,y-1),(x+1,y-1),(x-1,y),(x+1,y),(x-1,y+1), (x,y+1),(x+1,y+1)]
+    # La liste V, est la liste possible des voisins en partant de x,y. 
+    for dx,dy in V:
+        count += Grille[(dx)%60][(dy)%60]
+    return count
 
-def Voisin(x, y):
-    end = False
-    nbr_v = 0
-    for i in range(3):
-        for j in range(3):
-            if grille[((x-1)+i)%60][((y-1)+j)%60] == 1:
-                nbr_v += 1
-            if nbr_v == 1:
-                nbr_v = 0
-    return nbr_v
-
-def Evolution(grille):
-    g = []
-    l = []
+# Evolution de la grille en fonction des voisins
+def Evolution():
+    global Grille
+    Grille2 = [ ] # init nouvelle grille vide
     for i in range(60):
-        l.append(0)
-    for i in range(60):
-        g.append(ligne.copy())
+        Grille2.append([0]*60)
 
-    for x in range(len(grille)):
-        for y in range(len(grille[x])):
-            if Voisin(x, y) >= 1:
-                g[x][y] = Voisin(x, y)
-    grille = g
-    Affiche(grille)
+    for x in range(60) :
+       for y in range(60) :
+            nbVoisins = CompteVoisins(x,y)
 
+            if Grille[x][y] == 0 and nbVoisins == 3 :
+                    Grille2[x][y] = 1
 
+            if Grille[x][y] == 1 and nbVoisins in [2,3] :
+                    Grille2[x][y] = 1
+    Grille = Grille2
 
+# Programme principal
 def PROG() :
     Affiche()
-    Evolution(grille)
-    window.after(100,PROG)
+    Evolution()
+    Mafenetre.after(100,PROG)
 
 
-# Création de la fenêtre de dessin
-window = Tk()
-window.geometry(str(TAILLE) +"x"+str(TAILLE))
-canvas = Canvas(window,width=TAILLE, height=TAILLE, borderwidth=0,
-    highlightthickness=0,bg="white") 
+# Création de la fenêtre de dessin
+Mafenetre = Tk()
+Mafenetre.geometry(str(TAILLE) +"x"+str(TAILLE))
+canvas = Canvas(Mafenetre,width=TAILLE, height=TAILLE, borderwidth=0, highlightthickness=0,bg="lightgray")
 canvas.pack()
-window.after(100,PROG) 
-window.mainloop()
-
-
+Mafenetre.after(100,PROG)
+Mafenetre.mainloop()
