@@ -6,7 +6,7 @@ grille = []
 numbers = [0, 0, 0]
 color1 = 'gold'
 color2 = 'grey25'
-time = 1
+time = 5
 
 for i in range(60):
     grille.append([0]*60)
@@ -68,7 +68,7 @@ def Evolution():
     for i in range(60):
         grille2.append([0]*60)
 
-    did = random.randint(1, 1000)
+    did = random.randint(1, 500)
     for x in range(60) :
        for y in range(60) :
             nbVoisins = CompteVoisins(x,y)
@@ -86,15 +86,14 @@ def Evolution():
             if grille[x][y] == 2 and nbVoisins2 in [2,3] :
                     grille2[x][y] = 2
             
-            did = random.randint(1, 500)
-            if did >= 1000-1:
+            if did >= 500-5:
                 print('active')
                 sa = random.randint(1,2)
                 if sa == 1:
-                    for i in range(random.randint(1, 500)):
+                    for i in range(random.randint(1, 20)):
                         grille2[random.randint(0,59)][random.randint(0,59)] = 1
                 else:
-                    for i in range(random.randint(1, 500)):
+                    for i in range(random.randint(1, 20)):
                         grille2[random.randint(0,59)][random.randint(0,59)] = 2
 
     grille = grille2
