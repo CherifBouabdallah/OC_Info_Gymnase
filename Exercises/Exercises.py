@@ -373,7 +373,7 @@ def function(word):
 
 function(word)
 
-'''
+
 
 grille =[]
 ligne =[]
@@ -397,3 +397,6 @@ for i in range(len(grille)):
 for x in range(len(grille)):
     for y in range(len(grille[x])):
         print(grille[x][y]) 
+
+        
+'''
