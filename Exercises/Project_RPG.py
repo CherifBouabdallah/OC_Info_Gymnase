@@ -1,5 +1,4 @@
-import time
-import math
+import random
 
 class Character:
     nbr = 0
@@ -77,7 +76,7 @@ class Character:
 
     @property
     def power(self):
-        return self.mana + self.age
+        return self.mana + self.age + self.strength
     
     @property
     def intro(self):
@@ -96,14 +95,27 @@ class Character:
 
 
 
-class Civillian(Character):
-    def __init__(self, name, age = 18, strength = 1, weapon = 'Knife', typ='Civilian', mana=10, life = 500, spell='wind'):
-        super().__init__(name, age, strength, weapon, typ ,mana, life)
+class Civilian(Character):
+    def __init__(self, name, age = 18, strength = 1, weapon = 'Knife', typ='Civilian', mana=10, life = 500, spell='spit'):
+        super().__init__(name, age, strength=1, weapon='Knife', typ='Civilian' ,mana=0, life=400)
         self.spell = spell
 
     def __str__(self):
-        return self.name+" is a civillian"
+        return self.name+" is a "+self.typ
+    
+    def Chance(self):
+        a = random.randint(0, 5)
+        if a == 1:
+            self.life += 100
 
+
+class Merc(Character):
+    def __init__(self, name, age = 32, strength = 10, weapon = 'Gun', typ='Merc', mana=5, life = 600, spell='Punch'):
+        super().__init__(name, age, strength, weapon, typ, mana, life)
+        self.spell = spell
+
+    def __str__(self):
+        return self.name+" is a "+self.typ+"and he is stronger than you."
 
 class Place:
     nbr = 0
@@ -127,6 +139,16 @@ class Place:
         else:
             Place.dico_typ[self.typ] = 1
 
+def print_character_attributes(character):
+    print("Character Attributes:")
+    print(f"Name: {character.name}")
+    print(f"Age: {character.age}")
+    print(f"Strength: {character.strength}")
+    print(f"Weapon: {character.weapon}")
+    print(f"Type: {character.typ}")
+    print(f"Mana: {character.mana}")
+    print(f"Life: {character.life}")
+    print(f"Spell: {getattr(character, 'spell', None)}")
 
 def setting_teller(location):
     print('This place is named', location.city,'it is located in the state of', location.province, 'in a country named', location.country)
@@ -141,14 +163,18 @@ def setting_teller(location):
         return self.city + self.province + self.country + self.typ
 
 
-
-me = Character('V', 19, 5, 'Blades', 'Merc')
+me = Merc('V')
 me2 = Character('W', typ='Merc', weapon='Gun')
 me3 = Character('X', 50)
 me4 = Character('Y', strength=6, weapon='Gun')
+me5 = Civilian('Z')
+
 
 location = Place('Night City', 'New California', 'NUSA')
 
-#me.fight(me2)
-me.fight(me3)
+print(Character.dico_typ)
+print(Character.dico_weapon)
+print_character_attributes(me)
 
+#me.fight(me2)
+#me.fight(me3)
