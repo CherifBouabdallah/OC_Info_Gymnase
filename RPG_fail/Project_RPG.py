@@ -5,7 +5,7 @@ from place import *
 from other import *
 
 
-me = Merc('V', life=5000s)
+me = Merc('V', life=5000)
 me2 = Character('W', typ='Merc', weapon='Gun')
 me3 = Character('X', 50)
 me4 = Character('Y', strength=6, weapon='Gun')
