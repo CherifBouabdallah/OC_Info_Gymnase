@@ -1,4 +1,4 @@
-
+'''
 l = [7,3,2,11,1, 6, 30, -5, 12, -7, 1]
 
 
@@ -35,10 +35,12 @@ def mini_insert(l):
     if n > val:
         l[n] 
 
-    ''' Compléter ce programme pour qu'il:
-        1. décale les éléments triés plus grand que val d'une position.
-        2. enregistre val juste après le premier élément plus petit ou égale à val '''
-
-
 
 print(l)
+
+'''
+
+u=1
+for i in range(10):
+    u=u+1 
+    u=2*u
