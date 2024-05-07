@@ -38,9 +38,44 @@ def mini_insert(l):
 
 print(l)
 
-'''
+
 
 u=1
 for i in range(10):
     u=u+1 
     u=2*u
+
+
+
+
+
+
+n = 50
+prix = 120
+
+
+l_valeur = [50, 20, 10, 5, 2, 1]
+l_billets = [0, 0, 0, 0, 0, 0] 
+
+
+while prix > 0:
+    for i in range(len(l_valeur)):
+        valeur = l_valeur[i]
+        if prix >= valeur:
+            l_billets[i] = prix // valeur
+            prix -= l_billets[i] * valeur
+
+print(l_billets)
+
+
+'''
+
+
+n = 6
+d = 10000
+
+d_reste = (1/2)**n
+
+print(d*d_reste)
+print(d-(d*d_reste))
+
